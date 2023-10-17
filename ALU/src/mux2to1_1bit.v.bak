@@ -1,0 +1,3 @@
+module mux2to1_1bit(choice1, choice2, out, sel);
+	input choice1, choice2, sel;
+	output out;
