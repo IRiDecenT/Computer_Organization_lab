@@ -1,10 +1,11 @@
 module mux2to1_1bit(choice1, choice2, out, sel);
 	input choice1, choice2, sel;
-	output out;
+	output reg out;
 	
-	begin
+	always @(*)begin
 		case(sel)
-		0: assign out = choice1;
-		1: assign out = choice2;
+		0: out = choice1;
+		1: out = choice2;
+		endcase
 	end
 endmodule

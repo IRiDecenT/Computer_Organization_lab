@@ -1,10 +1,11 @@
 module mux2to1_32bit_01mux(sel, out);
 	input sel;
-	output[31:0] out;
+	output reg[31:0] out;
 	
-	begin
+	always @(*)begin
 		case(sel)
-		0: assign out = 32'b0;
+		0: out = 32'b0;
 		1: assign out = 32'hffffffff;
+		endcase
 	end
-endmodlue
+endmodule
